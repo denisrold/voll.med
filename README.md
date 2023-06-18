@@ -7,5 +7,5 @@
 Paths:
 
 Registering a doctor
-POST 
+Post 
 "/medico"
