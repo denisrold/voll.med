@@ -4,5 +4,5 @@
 
 <p>README under construction</p>
 
-Restfull Api(back-end):
-Client(front-end):
+<p>Restfull Api(back-end): https://github.com/denisrold/voll.med/tree/master/voll-med/api#readme </p>
+<p>Client(front-end):</p>
