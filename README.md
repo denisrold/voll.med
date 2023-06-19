@@ -4,8 +4,5 @@
 
 <p>README under construction</p>
 
-Paths:
-
-Registering a doctor
-Post 
-"/medico"
+Restfull Api(back-end):
+Client(front-end):
