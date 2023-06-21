@@ -1,5 +1,6 @@
 package voll.med.api.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,7 @@ public class MedicoController {
     @Autowired
     private MedicoRepository medicoRepository;
     @PostMapping
-    public void registrarMedico(@RequestBody DatosRegistroMedico datosRegistroMedico){
+    public void registrarMedico(@RequestBody @Valid DatosRegistroMedico datosRegistroMedico){
         medicoRepository.save(new Medico(datosRegistroMedico));
     }
 }
