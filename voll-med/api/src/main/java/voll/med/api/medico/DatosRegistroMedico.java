@@ -13,6 +13,8 @@ public record DatosRegistroMedico(
         @NotBlank
         @Email
         String email,
+        @NotBlank
+        String telefono,
         @Pattern(regexp = "\\d{4,6}") // me aseguro que sean numeros.
         String documento,
         @NotNull // porque es un ENUM
