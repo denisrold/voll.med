@@ -30,5 +30,29 @@ METODO GET:
 -Pagination 10 per page
 
 METODO PUT:
+Espera un "id" por body.
+modificable
+
+"nombre"
+"documento"
+
+"direccion":{
+"calle":"23",
+"distrito":"Sistole",
+"ciudad":"Cardilandia",
+"numero":"2323",
+"complemento": "a"
+}
+
+METODO DELETE LOGICO:
+Path: "/medicos/id"
+No borra el registro de la base de datos.
 
 
+METODO DELETE (no-logico) DESACTIVADO.
+Espera un id por Path Variable. 
+Path: "/medicos/id"
+Borra el registro de la base de datos. 
+
+
+ 
