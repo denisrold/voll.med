@@ -26,6 +26,9 @@ METODO GET:
 "documento"
 "especialidad"
 
--Order Asc
+-Order nombre=asc
 -Pagination 10 per page
+
+METODO PUT:
+
 
