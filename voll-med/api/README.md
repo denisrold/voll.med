@@ -19,12 +19,13 @@ POST METHOD:
 }
 
 Obteniendo una lista de medicos. 
-METODO GET :
-"nombre":"Jorge Corazón",		
-"email":"jorgecorazon@voll.med",
-"documento":"22223568",  
-"especialidad":"CARDIOLOGIA"
+METODO GET:
+
+"nombre"		
+"email"
+"documento"
+"especialidad"
 
 -Order Asc
--Pagination
+-Pagination 10 per page
 
