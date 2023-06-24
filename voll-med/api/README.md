@@ -1,7 +1,8 @@
 HTTP:
 
-Registering a doctor
-POST METHOD:  Path:"/medico"
+Path:"/medico"
+- Registering a doctor
+POST METHOD:  
 {
 "nombre":"Jorge Corazón",		     // No debe estar en blanco 
 "email":"jorgecorazon@voll.med",    // debe ser un formato de email Valido
@@ -16,3 +17,14 @@ POST METHOD:  Path:"/medico"
 	"complemento": "a"
 	}
 }
+
+Obteniendo una lista de medicos. 
+METODO GET :
+"nombre":"Jorge Corazón",		
+"email":"jorgecorazon@voll.med",
+"documento":"22223568",  
+"especialidad":"CARDIOLOGIA"
+
+-Order Asc
+-Pagination
+
