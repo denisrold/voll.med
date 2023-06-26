@@ -57,4 +57,6 @@ Path: "/medicos/id"
 Borra el registro de la base de datos. 
 
 
- 
+METODO GET DETAIL MEDICO:
+Path: "/medicos/id"
+RESPONSE CON LA INFO DEL MEDICO DE ESE ID. 
