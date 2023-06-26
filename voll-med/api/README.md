@@ -2,8 +2,10 @@ HTTP:
 
 Path:"/medico"
 - Registering a doctor
-POST METHOD:  
-{
+POST METHOD:
+- Respuesta al cliente: JSON-> Medico creado // Header -> get location: http://localhost:8080/medicos/10
+
+- {
 "nombre":"Jorge Corazón",		     // No debe estar en blanco 
 "email":"jorgecorazon@voll.med",    // debe ser un formato de email Valido
 "telefono":"0303456",              // Deben ser un string.
