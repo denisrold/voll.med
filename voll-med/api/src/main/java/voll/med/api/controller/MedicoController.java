@@ -2,6 +2,7 @@ package voll.med.api.controller;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -47,9 +48,10 @@ public class MedicoController {
 
     @DeleteMapping("/{id}")
     @Transactional
-    public void eliminarMedico(@PathVariable Long id){
+    public ResponseEntity eliminarMedico(@PathVariable Long id){
     Medico medico = medicoRepository.getReferenceById(id);
     medico.desactivarMedico();
+    return ResponseEntity.noContent().build();
     }
 
     /*
@@ -58,4 +60,11 @@ public class MedicoController {
     Medico medico = medicoRepository.getReferenceById(id);
     medicoRepository.delete(medico);
     }*/
+
+    @GetMapping("/id")
+    public void retornaDatosMedico(@PathVariable Long id){
+        Medico medico = medicoRepository.getReferenceById(id);
+        medico.desactivarMedico();
+    }
+
 }
