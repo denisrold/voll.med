@@ -61,10 +61,13 @@ public class MedicoController {
     medicoRepository.delete(medico);
     }*/
 
-    @GetMapping("/id")
-    public void retornaDatosMedico(@PathVariable Long id){
+    @GetMapping("/{id}")
+    public ResponseEntity<DatosRespuestaMedico> retornaDatosMedico(@PathVariable Long id){
         Medico medico = medicoRepository.getReferenceById(id);
-        medico.desactivarMedico();
+        var datosMedico = new DatosRespuestaMedico(medico.getId(),medico.getNombre(),medico.getEmail(),
+                medico.getDocumento(),new DatosDireccion(medico.getDireccion().getCalle(),medico.getDireccion().getDistrito(),
+                medico.getDireccion().getCiudad(),medico.getDireccion().getNumero(),medico.getDireccion().getComplemento()));
+     return ResponseEntity.ok(datosMedico);
     }
 
 }
