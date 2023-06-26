@@ -31,8 +31,8 @@ METODO GET:
 
 METODO PUT:
 Espera un "id" por body.
-modificable
-
+Retorna al cliente: JSON(id, nombre, email, documento, direccion)
+Datos modificables:
 "nombre"
 "documento"
 
