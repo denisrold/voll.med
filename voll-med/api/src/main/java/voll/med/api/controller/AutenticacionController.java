@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import voll.med.api.domain.usuarios.DatosAutenticacionUsuario;
 import voll.med.api.domain.usuarios.Usuario;
+import voll.med.api.infra.security.DatosJWTToken;
 import voll.med.api.infra.security.TokenService;
 
 @RestController
@@ -30,6 +31,6 @@ public class AutenticacionController {
 
         var usuarioAutenticado = authenticationManager.authenticate(authToken);
         var JWTtoken = tokenService.generarToken((Usuario) usuarioAutenticado.getPrincipal());
-        return ResponseEntity.ok(JWTtoken);
+        return ResponseEntity.ok(new DatosJWTToken(JWTtoken));
     }
 }

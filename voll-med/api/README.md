@@ -65,6 +65,13 @@ RESPONSE CON LA INFO DEL MEDICO DE ESE ID.
 Tramiento de Errores:
 Personalizados en archivo -> infra -> errores -> TratadorDeErrores
 
+
+post "/login"
 UserAuthentification:
 Spring Security - ByScript 
 Auth0 - JWT
+
+Espera: usuario:""  y clave: ""
+
+Responde con un JWT, en formato json. 
+
