@@ -59,4 +59,5 @@ Path: "/medicos/id"
 RESPONSE CON LA INFO DEL MEDICO DE ESE ID. 
 
 
-Tramiento de Errores: 
+Tramiento de Errores:
+Personalizados en archivo -> infra -> errores -> TratadorDeErrores
