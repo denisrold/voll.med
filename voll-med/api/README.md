@@ -1,4 +1,4 @@
-En construccion
+Readme en construccion.
 
 HTTP CRUD:
 Path:"/medico"
@@ -65,4 +65,6 @@ RESPONSE CON LA INFO DEL MEDICO DE ESE ID.
 Tramiento de Errores:
 Personalizados en archivo -> infra -> errores -> TratadorDeErrores
 
-UserAuthentification: Spring Security - ByScript 
+UserAuthentification:
+Spring Security - ByScript 
+Auth0 - JWT
