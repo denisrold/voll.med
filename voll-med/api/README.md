@@ -1,6 +1,9 @@
+En construccion
+
 HTTP CRUD:
 Path:"/medico"
-- Registering a doctor
+- Registrar un doctor
+- 
 POST METHOD:
 - Respuesta al cliente: JSON-> Medico creado // Header -> get location: http://localhost:8080/medicos/10
 
@@ -17,8 +20,8 @@ POST METHOD:
 	"complemento": "a"
 	}}
 
-Obteniendo una lista de medicos. 
-METODO GET:
+
+METODO GET: Obteniendo una lista de medicos.
 
 "nombre"		
 "email"
@@ -61,3 +64,5 @@ RESPONSE CON LA INFO DEL MEDICO DE ESE ID.
 
 Tramiento de Errores:
 Personalizados en archivo -> infra -> errores -> TratadorDeErrores
+
+UserAuthentification: Spring Security - ByScript 
