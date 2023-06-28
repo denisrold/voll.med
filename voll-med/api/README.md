@@ -1,12 +1,10 @@
-HTTP:
-
+HTTP CRUD:
 Path:"/medico"
 - Registering a doctor
 POST METHOD:
 - Respuesta al cliente: JSON-> Medico creado // Header -> get location: http://localhost:8080/medicos/10
 
-- {
-"nombre":"Jorge Corazón",		     // No debe estar en blanco 
+- {"nombre":"Jorge Corazón",		     // No debe estar en blanco 
 "email":"jorgecorazon@voll.med",    // debe ser un formato de email Valido
 "telefono":"0303456",              // Deben ser un string.
 "documento":"22223568",           // Deben ser numeros. 
@@ -17,8 +15,7 @@ POST METHOD:
 	"ciudad":"Cardilandia",
 	"numero":"2323",
 	"complemento": "a"
-	}
-}
+	}}
 
 Obteniendo una lista de medicos. 
 METODO GET:
@@ -60,3 +57,6 @@ Borra el registro de la base de datos.
 METODO GET DETAIL MEDICO:
 Path: "/medicos/id"
 RESPONSE CON LA INFO DEL MEDICO DE ESE ID. 
+
+
+Tramiento de Errores: 
