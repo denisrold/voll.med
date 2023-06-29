@@ -32,7 +32,8 @@ public class SecurityConfigurations {
                         .permitAll()
                         .anyRequest()
                         .authenticated())
-                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class).build();
+                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class) // conecto el filtro conla authenticacion del usuario.
+                .build();
     }
 
     @Bean
