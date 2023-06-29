@@ -25,13 +25,13 @@ public class SecurityFilter extends OncePerRequestFilter {
     var authHeader = request.getHeader("Authorization");
         if(authHeader != null){
             var token = authHeader.replace("Bearer ", "");
-            var subject = tokenService.getSubject(token);
-            if(subject != null){
+            var nombreUsuario = tokenService.getSubject(token);
+            if(nombreUsuario != null){
                 //token valido
-                var usuario = usuarioRepository.findByLogin(subject);
+                var usuario = usuarioRepository.findByLogin(nombreUsuario);
                 var authentication = new UsernamePasswordAuthenticationToken(
                         usuario,null,usuario.getAuthorities()
-                );
+                ); // FUERZO LA AUTENTICACION DEL USUARIO
 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             };

@@ -72,6 +72,9 @@ Spring Security - ByScript
 Auth0 - JWT
 
 Espera: usuario:""  y clave: ""
+Responde con un JWT, en formato json.
 
-Responde con un JWT, en formato json. 
 
+Filtros, Seguridad, Authorizacion.
+
+Tipos de cuenta: Admin, Usuario (en construcción.)
