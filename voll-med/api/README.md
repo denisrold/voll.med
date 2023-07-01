@@ -77,4 +77,18 @@ Responde con un JWT, en formato json.
 
 Filtros, Seguridad, Authorizacion.
 
-Tipos de cuenta: Admin, Usuario (en construcción.)
+Tipos de cuenta:(en construcción.)
+TIPOS DE USUARIO:
+1-ADMIN
+2-MEDICOS
+3-PACIENTES
+
+CREATE USER: PATH"/usuario"
+JSON {
+"login":"String",
+"clave":"String",
+"role_id":"num 1-3"
+}
+
+default value: 3;
+
