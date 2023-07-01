@@ -26,6 +26,13 @@ public class Usuario implements UserDetails {
     private Long id;
     private String login;
     private String clave;
+    private int role_id;
+
+    public Usuario(DatosRegistroUsuario datosRegistroUsuario) {
+        this.login = datosRegistroUsuario.login();
+        this.clave = datosRegistroUsuario.clave();
+        this.role_id = datosRegistroUsuario.role_id();
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
