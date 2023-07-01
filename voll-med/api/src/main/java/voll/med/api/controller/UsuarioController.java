@@ -26,4 +26,11 @@ public class UsuarioController {
     return ResponseEntity.created(url).body(datosRespuestaUsuario);
     }
 
+    /*
+     -HASHEAR EL PASSWORD
+     -GET USUARIOS
+     -MODIFICAR USUARIO
+     -DELETE USER
+    */
+
 }
