@@ -7,7 +7,8 @@ Path:"/medico"
 POST METHOD:
 - Respuesta al cliente: JSON-> Medico creado // Header -> get location: http://localhost:8080/medicos/10
 
-- {"nombre":"Jorge Corazón",		     // No debe estar en blanco 
+- {
+- "nombre":"Jorge Corazón",		     // No debe estar en blanco 
 "email":"jorgecorazon@voll.med",    // debe ser un formato de email Valido
 "telefono":"0303456",              // Deben ser un string.
 "documento":"22223568",           // Deben ser numeros. 
@@ -79,16 +80,16 @@ Filtros, Seguridad, Authorizacion.
 
 Tipos de cuenta:(en construcción.)
 TIPOS DE USUARIO:
-1-ADMIN
-2-MEDICOS
-3-PACIENTES
+id:1 ADMIN
+id:2 MEDICOS
+id:3 PACIENTES
 
 CREATE USER: PATH"/usuario"
 JSON {
 "login":"String",
 "clave":"String",
-"role_id":"num 1-3"
+"role_id":"num 1-3" Default value = "3"
 }
 
-default value: 3;
+ USERS -> HTTP METHODS:
 

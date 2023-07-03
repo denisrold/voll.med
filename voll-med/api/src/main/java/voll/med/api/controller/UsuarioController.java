@@ -30,7 +30,7 @@ public class UsuarioController {
      -HASHEAR EL PASSWORD
      -GET USUARIOS
      -MODIFICAR USUARIO
-     -DELETE USER
+     -DELETE USER ->  agregarle propiedad active a usuarios
     */
 
 }
