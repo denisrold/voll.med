@@ -3,7 +3,7 @@ package voll.med.api.controller;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import voll.med.api.domain.usuarios.DatosRegistroUsuario;
@@ -19,9 +19,13 @@ import java.net.URI;
 public class UsuarioController {
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
+    public PasswordEncoder passwordEncoder;
+
     @PostMapping
     public ResponseEntity<DatosRespuestaUsuario> registrarUsuario(@RequestBody @Valid DatosRegistroUsuario datosRegistroUsuario, UriComponentsBuilder uriComponentsBuilder){
-        Usuario usuario = usuarioRepository.save(new Usuario(datosRegistroUsuario));
+        Usuario usuario = usuarioRepository.save(new Usuario(datosRegistroUsuario,passwordEncoder));
         DatosRespuestaUsuario datosRespuestaUsuario = new DatosRespuestaUsuario(usuario.getLogin());
         URI url = uriComponentsBuilder.path("/usuario/{id}").buildAndExpand(usuario.getId()).toUri();
     return ResponseEntity.created(url).body(datosRespuestaUsuario);
