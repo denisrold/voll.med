@@ -91,5 +91,18 @@ JSON {
 "role_id":"num 1-3" Default value = "3"
 }
 
- USERS -> HTTP METHODS:
+AUTORIZACIONES:
+USERS -> HTTP METHODS:
 
+DELETE LOGICO "usuario/id"
+
+PUT "/usario": 
+espera si o si JSON {"id":"6"} /  permite actualizar login y clave
+
+ADMIN -> HTTP METHODS:
+GET USER LIST-PAGE: GET /usuario
+GET USER BY ID /usuario/id
+DELETE LOGICO usuario/id
+PUT ROLE "/usario":
+espera si o si JSON {"id":"6", "role_id"} /  permite actualizar tipo de usuario.
+role_id = 1-ADMIN 2-MEDICO 3-PACIENTE
