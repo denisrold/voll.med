@@ -59,7 +59,7 @@
 <p>Ruta: "/medicos/id"</p>
 <p>Retorna la información detallada del médico con ese ID.</p>
 <h2>Tratamiento de errores</h2>
-<p>Se manejan errores personalizados en el archivo "TratadorDeErrores" ubicado en la carpeta "infra -> errores".</p>
+<p>Se manejan errores personalizados en el archivo <a href="https://github.com/denisrold/voll.med/blob/master/voll-med/api/src/main/java/voll/med/api/infra/errores/TratadorDeErrores.java">"TratadorDeErrores"</a>></p>
 <h2>Autenticación de usuarios</h2>
 <p>Ruta POST: "/login"</p>
 <ul>
