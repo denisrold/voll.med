@@ -1,6 +1,7 @@
-<h1>HTTP CRUD: Path: "/medico"</h1>
+<h1>HTTP CRUD</h1>
 <h2>Registrar un doctor</h2>
 <h3>Método POST:</h3>
+Path: "/medico"
 <p>Respuesta al cliente: JSON -> Medico creado</p>
 <p>Header -> getLocation: /medicos/{id}</p>
 <p>Ejemplo de cuerpo de solicitud:</p>
@@ -58,9 +59,11 @@
 <h3>Método GET:</h3>
 <p>Ruta: "/medicos/id"</p>
 <p>Retorna la información detallada del médico con ese ID.</p>
-<h2>Tratamiento de errores</h2>
+
+<h1>Tratamiento de errores</h1>
 <p>Se manejan errores personalizados en el archivo <a href="https://github.com/denisrold/voll.med/blob/master/voll-med/api/src/main/java/voll/med/api/infra/errores/TratadorDeErrores.java"><b>TratadorDeErrores</b></a></p>
-<h2>Autenticación de usuarios</h2>
+
+<h1>Autenticación de usuarios</h1>
 <p>Ruta POST: "/login"</p>
 <ul>
   <li>User Authentication: Spring Security - ByScript Auth0 - JWT</li>
@@ -79,7 +82,7 @@
   "rol": "PACIENTE", "MEDICO", "USUARIO"
 }
 </pre>
-<h2>Autorizaciones</h2>
+<h1>Autorizaciones</h1>
 <p>Usuarios STANDAR:</p>
 <ul>
   <li>PUT "/usuario": Espera JSON {"id": "6"} y permite actualizar el login y la clave.</li>
