@@ -2,7 +2,7 @@
 <h2>Registrar un doctor</h2>
 <h3>Método POST:</h3>
 <p>Respuesta al cliente: JSON -> Medico creado</p>
-<p>Header -> getLocation: <a href="http://localhost:8080/medicos/10">http://localhost:8080/medicos/10</a></p>
+<p>Header -> getLocation: /medicos/{id}</p>
 <p>Ejemplo de cuerpo de solicitud:</p>
 <pre>
 {
@@ -89,6 +89,5 @@
   <li>DELETE LOGICO "/usuario/id"</li>
   <li>Obtener lista de usuarios paginada: GET "/usuario"</li>
   <li>Obtener usuario por ID: GET "/usuario/id"</li>
-  <li>DELETE LOGICO "/usuario/id"</li>
   <li>Actualizar el rol de un usuario: PUT "/usuario/". Espera JSON {"id": "6", "role_id"} y permite actualizar el tipo de usuario.</li>
 </ul>
