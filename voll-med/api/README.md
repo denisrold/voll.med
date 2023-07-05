@@ -76,33 +76,31 @@ Espera: usuario:""  y clave: ""
 Responde con un JWT, en formato json.
 
 
-Filtros, Seguridad, Authorizacion.
 
-Tipos de cuenta:(en construcción.)
+
 TIPOS DE USUARIO:
-id:1 ADMIN
-id:2 MEDICOS
-id:3 PACIENTES
+"ADMIN","PACIENTE","MEDICO"
 
-CREATE USER: PATH"/usuario"
+CREATE USER: PATH "/usuario"
 JSON {
 "login":"String",
 "clave":"String",
-"role_id":"num 1-3" Default value = "3"
+"rol":STRING "PACIENTE","MEDICO","USUARIO".
 }
 
 AUTORIZACIONES:
-USERS -> HTTP METHODS:
+
+USERS: STANDAR:
+
+PUT "/usario": espera si o si JSON {"id":"6"} /  permite actualizar login y clave
+
+
+USER: ADMIN:
 
 DELETE LOGICO "usuario/id"
-
-PUT "/usario": 
-espera si o si JSON {"id":"6"} /  permite actualizar login y clave
-
-ADMIN -> HTTP METHODS:
-GET USER LIST-PAGE: GET /usuario
-GET USER BY ID /usuario/id
-DELETE LOGICO usuario/id
-PUT ROLE "/usario":
+GET USER LIST-PAGE: GET "/usuario"
+GET USER BY ID "/usuario/id"
+DELETE LOGICO "usuario/id"
+PUT ROLE "/usario/":
 espera si o si JSON {"id":"6", "role_id"} /  permite actualizar tipo de usuario.
-role_id = 1-ADMIN 2-MEDICO 3-PACIENTE
+
