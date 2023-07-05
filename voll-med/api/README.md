@@ -89,7 +89,7 @@ Path: "/medico"
   <li>DELETE LOGICO "/usuario/id"</li>
   <li>Obtener lista de usuarios paginada: GET "/usuario"</li>
   <li>Obtener usuario por ID: GET "/usuario/id"</li>
-  <li>Actualizar el rol de un usuario: PUT "/usuario/". Espera JSON {"id": "6", "role_id"} y permite actualizar el tipo de usuario.</li>
+  <li>Actualizar el rol de un usuario: PUT "/usuario/rol". Espera JSON {"id": "6", "role_id"} y permite actualizar el tipo de usuario.</li>
 </ul>
 
 <h1>Tratamiento de errores</h1>

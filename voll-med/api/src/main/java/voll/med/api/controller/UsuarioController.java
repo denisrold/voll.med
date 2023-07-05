@@ -59,7 +59,7 @@ public class UsuarioController {
         usuario.actualizarDatos(datosActualizarUsuario,passwordEncoder);
         return ResponseEntity.ok().build();
     }
-    @PutMapping("/{id}")
+    @PutMapping("/rol")
     @Transactional
     public ResponseEntity actualizarUsuarioRole(@RequestBody DatosActualizarUsuario datosActualizarUsuario){
         Usuario usuario = usuarioRepository.getReferenceById(datosActualizarUsuario.id());
