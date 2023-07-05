@@ -7,9 +7,8 @@ public record DatosRegistroUsuario(
         String login,
         @NotBlank
         String clave,
-        @DecimalMin(value = "1", message = "El role_id debe ser mayor o igual a 1")
-        @DecimalMax(value = "3", message = "El role_id debe ser menor o igual a 3")
-        int role_id
+        @NotBlank
+        String rol
         )
 {
 

@@ -9,11 +9,12 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import voll.med.api.domain.medico.DatosActualizarMedico;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 
 
 @Table(name="usuarios")
@@ -30,25 +31,25 @@ public class Usuario implements UserDetails {
     private String login;
     private String clave;
     private Boolean activo;
-    private int role_id;
+    private String rol;
 
     public Usuario(DatosRegistroUsuario datosRegistroUsuario) {
         this.activo = true;
         this.login = datosRegistroUsuario.login();
         this.clave = datosRegistroUsuario.clave();
-        this.role_id = datosRegistroUsuario.role_id();
+        this.rol = datosRegistroUsuario.rol();
     }
 
     public Usuario(DatosRegistroUsuario datosRegistroUsuario, PasswordEncoder passwordEncoder) {
         this.activo = true;
         this.login = datosRegistroUsuario.login();
         this.clave = passwordEncoder.encode(datosRegistroUsuario.clave());
-        this.role_id = datosRegistroUsuario.role_id();
+        this.rol = datosRegistroUsuario.rol();
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_USER"));// CONFIGURACION DE USUARIO POR DEFECTO
+        return List.of(new SimpleGrantedAuthority(rol));// CONFIGURACION DE USUARIO POR DEFECTO
     }
 
     @Override
@@ -90,10 +91,15 @@ public class Usuario implements UserDetails {
         }
     }
     public void actualizarDatosRole(DatosActualizarUsuario datosActualizarUsuario) {
-            this.role_id = datosActualizarUsuario.role_id();
+            this.rol = datosActualizarUsuario.rol();
     }
 
     public void desactivarUsuario() {
         this.activo = false;
+    }
+
+
+    public String getRol() {
+        return rol;
     }
 }
