@@ -60,9 +60,6 @@ Path: "/medico"
 <p>Ruta: "/medicos/id"</p>
 <p>Retorna la información detallada del médico con ese ID.</p>
 
-<h1>Tratamiento de errores</h1>
-<p>Se manejan errores personalizados en el archivo <a href="https://github.com/denisrold/voll.med/blob/master/voll-med/api/src/main/java/voll/med/api/infra/errores/TratadorDeErrores.java"><b>TratadorDeErrores</b></a></p>
-
 <h1>Autenticación de usuarios</h1>
 <p>Ruta POST: "/login"</p>
 <ul>
@@ -94,3 +91,6 @@ Path: "/medico"
   <li>Obtener usuario por ID: GET "/usuario/id"</li>
   <li>Actualizar el rol de un usuario: PUT "/usuario/". Espera JSON {"id": "6", "role_id"} y permite actualizar el tipo de usuario.</li>
 </ul>
+
+<h1>Tratamiento de errores</h1>
+<p>Se manejan errores personalizados en el archivo <a href="https://github.com/denisrold/voll.med/blob/master/voll-med/api/src/main/java/voll/med/api/infra/errores/TratadorDeErrores.java"><b>TratadorDeErrores</b></a></p>
